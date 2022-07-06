@@ -86,3 +86,9 @@ h1{
     font-size: 60px;
     color: #607196;
 }
+ .op{
+    background-color: greenyellow;
+}
+.spec{
+    background-color: aquamarine;
+}
