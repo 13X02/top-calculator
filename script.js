@@ -53,5 +53,51 @@ buttons.forEach((button)=>{
     
 )
 function calcOp(op){
-    console.log(op);
+    if (operation==null) {
+        operation=op;
+        res = Number(result.textContent);
+        result.textContent="";
+    }else{
+        switch (operation) {
+            case "+":
+                res+=Number(result.textContent);
+                break;
+            case "-":
+                res-=Number(result.textContent);
+                break;
+            case "*":
+                res*=Number(result.textContent);
+                break;
+            case "/":
+                if (result.textContent==0) {
+                    result.textContent="ERROR !"
+                    operation=null;
+                    res=0;
+                }else{
+                    res/=Number(result.textContent);
+                }
+                break;
+            case "%":
+                if (result.textContent==0) {
+                    result.textContent="ERROR !"
+                    operation=null;
+                    res=0;
+                }else{
+                    res=res%Number(result.textContent);
+                }
+                break;
+                
+            default:
+                break;
+            
+        }
+        if(op==="="){
+            result.textContent = `${res}`;
+            res=0;
+            operation=null;
+        }else{
+            operation=op;
+            result.textContent=""
+        }
+    }
 }
