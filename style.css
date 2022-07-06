@@ -1,3 +1,21 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .calc{
     border: 3px solid black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.result{
+    width: 100%;
+    border: 2px solid black;
+    padding: 5px;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
 }
