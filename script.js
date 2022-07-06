@@ -49,8 +49,7 @@ buttons.forEach((button)=>{
             calcOp("=");
         }
     })
-}
-    
+}    
 )
 function calcOp(op){
     if (operation==null) {
@@ -73,6 +72,7 @@ function calcOp(op){
                     result.textContent="ERROR !"
                     operation=null;
                     res=0;
+                    return;
                 }else{
                     res/=Number(result.textContent);
                 }
@@ -82,6 +82,7 @@ function calcOp(op){
                     result.textContent="ERROR !"
                     operation=null;
                     res=0;
+                    return;
                 }else{
                     res=res%Number(result.textContent);
                 }
